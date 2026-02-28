@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 // REPLACE THIS WITH YOUR ADSENSE PUBLISHER ID
 // Get it from: https://adsense.google.com
 // ============================================
-const ADSENSE_PUB_ID = "ca-pub-XXXXXXXXXXXXXXXX";
+const ADSENSE_PUB_ID = "ca-pub-3732137874384170";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,14 +55,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {!ADSENSE_PUB_ID.includes("XXXX") && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        <meta name="google-adsense-account" content="ca-pub-3732137874384170" />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

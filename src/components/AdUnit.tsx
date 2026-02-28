@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 // REPLACE THIS WITH YOUR ADSENSE PUBLISHER ID
 // Get it from: https://adsense.google.com
 // ============================================
-const ADSENSE_PUB_ID = "ca-pub-XXXXXXXXXXXXXXXX";
+const ADSENSE_PUB_ID = "ca-pub-3732137874384170";
 
 type AdFormat = "horizontal" | "vertical" | "rectangle" | "auto";
 
