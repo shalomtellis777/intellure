@@ -45,6 +45,9 @@ export const metadata: Metadata = {
       "Free online tools: word counter, JSON formatter, calculators, image tools, SEO tools, and more.",
   },
   robots: { index: true, follow: true },
+  other: {
+    "google-adsense-account": "ca-pub-3732137874384170",
+  },
 };
 
 export default function RootLayout({
@@ -55,7 +58,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-3732137874384170" />
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`}
