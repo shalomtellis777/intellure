@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getRelatedTools, type Tool } from "@/lib/tools";
+import AdUnit from "./AdUnit";
 
 export default function ToolLayout({
   tool,
@@ -23,9 +24,15 @@ export default function ToolLayout({
       <h1 className="text-3xl font-bold text-gray-900 mb-2">{tool.name}</h1>
       <p className="text-gray-500 mb-8">{tool.description}</p>
 
+      {/* Ad: Top of tool */}
+      <AdUnit format="horizontal" className="mb-6" />
+
       <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
         {children}
       </div>
+
+      {/* Ad: Below tool */}
+      <AdUnit format="auto" className="mt-8" />
 
       <div className="mt-12">
         <h2 className="text-xl font-semibold text-gray-900 mb-2">
@@ -33,6 +40,9 @@ export default function ToolLayout({
         </h2>
         <p className="text-gray-600 leading-relaxed">{tool.longDescription}</p>
       </div>
+
+      {/* Ad: Between content sections */}
+      <AdUnit format="rectangle" className="mt-8" />
 
       {related.length > 0 && (
         <div className="mt-12">
